@@ -79,7 +79,7 @@ function App() {
       city.lat,
       city.lon
     );
-    console.log(city.name, prediction.name);
+    // console.log(city.name, prediction.name);
     // console.log(getCardinalDirection(bearingValue), distance);
     const result = {
       city: prediction.name,
