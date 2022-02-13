@@ -23,7 +23,7 @@ function App() {
 
   const onClick = async () => {
     const prediction = cities.find((x) => x.name === input);
-    if (prediction.name == city.name && check()) {
+    if (prediction.name == city.name && counter < 6 && input.length > 0) {
       const tmp = calculate(prediction);
       tmp.color = "#3FBD58";
       await addToPredictions(tmp);
@@ -40,7 +40,7 @@ function App() {
           window.location.reload();
         }
       }, 500);
-    } else if (prediction && check()) {
+    } else if (prediction && counter < 4 && input.length > 0) {
       const tmp = calculate(prediction);
       addToPredictions(tmp);
       setCounter(counter + 1);
@@ -66,14 +66,6 @@ function App() {
     setPredictions(predictionsCopy);
   };
 
-  const check = () => {
-    if (counter < 4 && input.length > 0) {
-      return true;
-    } else {
-      return false;
-    }
-  };
-
   const calculate = (prediction) => {
     const bearingValue = bearing(
       prediction.lat,
@@ -87,7 +79,7 @@ function App() {
       city.lat,
       city.lon
     );
-    // console.log(city.name, prediction.name);
+    console.log(city.name, prediction.name);
     // console.log(getCardinalDirection(bearingValue), distance);
     const result = {
       city: prediction.name,
