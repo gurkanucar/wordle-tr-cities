@@ -1,0 +1,16 @@
+.input {
+  border-radius: 20px;
+  padding: 15px;
+  border-style: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
