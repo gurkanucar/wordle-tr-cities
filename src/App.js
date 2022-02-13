@@ -51,7 +51,7 @@ function App() {
       setCounter(counter + 1);
       setInput("");
       setTimeout(function () {
-        if (!alert("Malesef Basaramadiniz !")) {
+        if (!alert("Malesef Basaramadiniz ! \n Cevap: " + city.name)) {
           window.location.reload();
         }
       }, 500);
@@ -123,6 +123,14 @@ function App() {
         <button className="btn btn-primary rounded-btn" onClick={onClick}>
           Tahmin Et
         </button>
+      </div>
+      <div
+        className="demo"
+        onClick={() => {
+          window.open("https://github.com/gurkanucar", "_blank");
+        }}
+      >
+        github.com/gurkanucar
       </div>
     </div>
   );

@@ -27,3 +27,28 @@ body {
   padding-left: 40px;
   padding-right: 40px;
 }
+
+.demo {
+  color: rgb(158, 158, 158);
+  cursor: pointer;
+  margin-top: 50px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.demo:hover {
+  padding: 10px;
+  border-radius: 25px;
+  background-color: rgba(206, 206, 206, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.demo:active {
+  padding: 10px;
+  border-radius: 25px;
+  background-color: rgba(253, 253, 253, 0.1);
+  backdrop-filter: blur(5px);
+}

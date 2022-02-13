@@ -8,7 +8,7 @@ export const Input = (props) => {
         onChange={props.onChangeInput}
         className="input"
         list="cities"
-        placeholder="city..."
+        placeholder="sehir..."
         type="text"
       />
       <datalist id="cities">
